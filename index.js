@@ -4,7 +4,29 @@ const inquirer = require("inquirer");
 //fs is the buildinmodule in node.js to read data from the file
 const fs = require("fs");
 
+// Importing classes from ./lib/shapes directory
+const { Triangle, Square, Circle } = require("./lib/shapes");
 
+//Function writeToFile to design logo depend on the user input what we get as the promises(answers) in the call back function
+function writeToFile(filename,answers)
+{
+//logoSring must be empty 
+ let logoString = "";
+
+ //set the logo container
+ logoString = '<xmlns="http://www.w3.org/2000/svg" width="300" height="200"  svg version="1.1" >';
+
+ //set logo text
+ // <g> tag is part of the SVG (Scalable Vector Graphics) specification used  to wrap the text with  the shape together
+ logoString+="<g>";
+
+ //JOin the shape with the logo tex
+ logoString += `${answers.shape}`;
+
+ //shape
+ 
+
+}
 //function prompt for user input
 function prompt(){
     inquirer.prompt([
@@ -31,7 +53,7 @@ function prompt(){
         },
     ])
 
-     //promises answer is the object contain input value
+     //.then is the call back function and it takes resolved value of the promise (answer passed as an arguement) is the object contain input value
      .then((answers) =>
      {
        if(answers.length > 0)
