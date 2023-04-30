@@ -1,8 +1,10 @@
-//Inquier 
+//Inquier node.js library
 const inquirer = require("inquirer");
 
-//write file
+//fs is the buildinmodule in node.js to read data from the file
 const fs = require("fs");
+
+
 //function prompt for user input
 function prompt(){
     inquirer.prompt([
@@ -28,10 +30,18 @@ function prompt(){
         name: "shapeColor",
         },
     ])
-     //callback function
-     
-     .then(()=>
-     {
 
-     });
+     //promises answer is the object contain input value
+     .then((answers) =>
+     {
+       if(answers.length > 0)
+       {
+        console.log("Maximum length for text input is 3 characters")
+       }
+       else
+       {
+        //store the data so using write method collect all the user input and saved as new file(logo.txt) not text file logo.svg
+        writeToFile("logo.svg", answers);//call the writeTo File function(filename,promises or data from the user input)
+       }
+     })
 }
