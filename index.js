@@ -14,7 +14,7 @@ function writeToFile(fileName,answers)
  let logoString = "";
 
  //set the logo container
- logoString = '<xmlns="http://www.w3.org/2000/svg" width="300" height="200"  svg version="1.1" >';
+ logoString ='<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" version="1.1">';
 
  //set logo text
  // <g> tag is part of the SVG (Scalable Vector Graphics) specification used  to wrap the text with  the shape together
@@ -76,7 +76,7 @@ function prompt(){
         {
         type: "input",
         message: "Choose shapes color (Enter color keyword OR a hexadecimal number)",
-        name: "shapeColor",
+        name: "shapeBackgroundColor",
         },
     ])
 
