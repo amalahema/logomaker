@@ -76,7 +76,7 @@ function prompt(){
         {
         type: "input",
         message: "Choose shapes color (Enter color keyword OR a hexadecimal number)",
-        name: "shapeColor",
+        name: "shapeBackgroundColor",
         },
     ])
 
