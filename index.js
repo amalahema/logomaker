@@ -28,7 +28,7 @@ function writeToFile(fileName,answers)
  if (answers.shape === "Triangle") 
  {
    selectedShape = new Triangle();
-   logoString += svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeBackgroundColor}"/>`;
+   logoString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeBackgroundColor}"/>`;
 
  }
  else if (answers.shape === "Square") 
@@ -55,16 +55,17 @@ function writeToFile(fileName,answers)
 
 //function prompt for user input
 function prompt(){
-    inquirer.prompt([
+    inquirer.
+    prompt([
         {
          type: "input",
-         message: "what kind of text would you like to display in your logo?(upto 3 cahracters) ",
-         name: text,
+         message:"what text would you like to display in Logo?",
+         name: "text",
         },
         {
          type: "input",
-         message: "what text color  would you like to spray in your logo?(color code or a hexadecimal number)",
-         name: textColor,
+         message:"What text color would you like in logo(colorcode or hexadecimal number) ?",
+         name: "textColor",
         },
         {
          type: "list",
@@ -82,7 +83,7 @@ function prompt(){
      //.then is the call back function and it takes resolved value of the promise (answer passed as an arguement) is the object contain input value
      .then((answers) =>
      {
-       if(answers.text.length > 0)
+       if(answers.text.length > 3)
        {
         console.log("Maximum length for text input is 3 characters");
         prompt();
