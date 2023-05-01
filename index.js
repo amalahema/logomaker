@@ -64,7 +64,7 @@ function prompt(){
         {
          type: "input",
          message: "what text color  would you like to spray in your logo?(color code or a hexadecimal number)",
-         name: text,
+         name: textColor,
         },
         {
          type: "list",
@@ -82,7 +82,7 @@ function prompt(){
      //.then is the call back function and it takes resolved value of the promise (answer passed as an arguement) is the object contain input value
      .then((answers) =>
      {
-       if(answers.length > 0)
+       if(answers.text.length > 0)
        {
         console.log("Maximum length for text input is 3 characters");
         prompt();
