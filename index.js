@@ -8,7 +8,7 @@ const fs = require("fs");
 const { Triangle, Square, Circle } = require("./lib/shapes");
 
 //Function writeToFile to design logo depend on the user input what we get as the promises(answers) in the call back function
-function writeToFile(filename,answers)
+function writeToFile(fileName,answers)
 {
 //logoSring must be empty 
  let logoString = "";
@@ -18,15 +18,41 @@ function writeToFile(filename,answers)
 
  //set logo text
  // <g> tag is part of the SVG (Scalable Vector Graphics) specification used  to wrap the text with  the shape together
- logoString+="<g>";
+ logoString += "<g>";
 
  //JOin the shape with the logo tex
  logoString += `${answers.shape}`;
 
  //shape
- 
+ let selectedShape;
+ if (answers.shape === "Triangle") 
+ {
+   selectedShape = new Triangle();
+   logoString += svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeBackgroundColor}"/>`;
 
-}
+ }
+ else if (answers.shape === "Square") 
+ {
+    selectedShape = new Square();
+    logoString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`;
+  } 
+  else 
+  {
+    selectedShape = new Circle();
+    logoString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
+  }
+  
+  logoString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
+ //closing tag
+  logoString += "</g>";
+  logoString += "</svg>";
+  fs.writeFile(fileName, logoString, (err) => 
+  {
+    err ? console.log(err) : console.log("Generated logo.svg");
+  });
+} 
+
+
 //function prompt for user input
 function prompt(){
     inquirer.prompt([
@@ -58,12 +84,15 @@ function prompt(){
      {
        if(answers.length > 0)
        {
-        console.log("Maximum length for text input is 3 characters")
+        console.log("Maximum length for text input is 3 characters");
+        prompt();
        }
        else
        {
         //store the data so using write method collect all the user input and saved as new file(logo.txt) not text file logo.svg
         writeToFile("logo.svg", answers);//call the writeTo File function(filename,promises or data from the user input)
        }
-     })
+     });
 }
+//prompt user function called for the user input
+prompt();
