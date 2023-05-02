@@ -1,7 +1,14 @@
-# 10 Object-oriented Programming: SVG Logo Maker
+#  SVG Logo Maker
 
 ## Table of contents
-
+- Overview
+    - The Challenge
+    - Screenshot
+    - Links
+- My Approach
+    - Code construction
+    - Learnings
+- Author
 ### The Challenge
 
 GIVEN a command-line application that accepts user input
@@ -43,7 +50,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 - Generate a LOGO based on the user input 
 - How to handle the promise and call back function
-- How to turn the user input collection into an SVG    image  using the write file function
+- How to turn the user input collection into an SVG  image  using the write file function
 - How to use the class shape and extend its properties to triangle,square & circle
 - How to use the render method as the method overriding.
 - How to export the class
