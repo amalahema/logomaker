@@ -13,7 +13,7 @@ function writeToFile(fileName,answers)
 //logoSring must be empty 
  let logoString = "";
 
- //set the logo container
+ //set the logo 300x200 pixel image
  logoString ='<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" version="1.1">';
 
  //set logo text
@@ -24,21 +24,21 @@ function writeToFile(fileName,answers)
  logoString += `${answers.shape}`;
 
  //shape
- let selectedShape;
+
  if (answers.shape === "Triangle") 
  {
-   selectedShape = new Triangle();
+   //selectedShape = new Triangle();
    logoString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeBackgroundColor}"/>`;
 
  }
  else if (answers.shape === "Square") 
  {
-    selectedShape = new Square();
+   
     logoString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`;
   } 
   else 
   {
-    selectedShape = new Circle();
+    
     logoString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
   }
   
@@ -85,7 +85,7 @@ function prompt(){
      {
        if(answers.text.length > 3)
        {
-        console.log("Maximum length for text input is 3 characters");
+        console.log("Maximum text length is not more than 3 character");
         prompt();
        }
        else
