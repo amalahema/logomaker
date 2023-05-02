@@ -58,7 +58,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ### Walkthrough Video
 
-`[Walkthrough Video](https://drive.google.com/file/d/1AwMjqC7ptdFUUqweXFVUC3l56mkIDDhl/view)`.
+![Walkthrough Video](https://drive.google.com/file/d/1AwMjqC7ptdFUUqweXFVUC3l56mkIDDhl/view)
 
        
  
