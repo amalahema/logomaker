@@ -54,7 +54,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 - How to use the class shape and extend its properties to triangle,square & circle
 - How to use the render method as the method overriding.
 - How to export the class
-- How to write unit tests for the  blue triangle and check whether the expected result fail or passed
+- How to write unit tests for the  green color triangle and check whether the expected result fail or passed
 
 ### Walkthrough Video
          https://drive.google.com/file/d/1AwMjqC7ptdFUUqweXFVUC3l56mkIDDhl/view
