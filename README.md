@@ -57,6 +57,12 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 - How to write unit tests for the  green color triangle and check whether the expected result fail or passed
 
 ### Walkthrough Video
-         https://drive.google.com/file/d/1AwMjqC7ptdFUUqweXFVUC3l56mkIDDhl/view
+
+`[Walkthrough Video](https://drive.google.com/file/d/1AwMjqC7ptdFUUqweXFVUC3l56mkIDDhl/view)`.
+
+       
+ 
+
+
 # Author
 - Amala Hema , https://github.com/amalahema
